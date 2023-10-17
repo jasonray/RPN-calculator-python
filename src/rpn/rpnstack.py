@@ -5,18 +5,20 @@ class RpnStack:
         self._stack=[]
 
     def peek(self):
-        size = len(self._stack)
-        if size == 0:
+        if self._is_empty():
             return 0
         else:
-            return self._stack[size-1]
+            return self._stack[len(self._stack)-1]
 
     def pop(self):
-        if len(self._stack) == 0:
+        if self._is_empty():
             return 0
         else:
             return self._stack.pop()
 
     def push(self, number):
         self._stack.append(number)
+
+    def _is_empty(self):
+        return (len(self._stack) == 0)        
 
