@@ -1,1 +1,1 @@
-pipenv run python -m unittest src/test/rpn/calculatortest.py
+pipenv run python -m unittest discover -s ./src/test/rpn -p "*test.py"
