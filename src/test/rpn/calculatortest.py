@@ -7,6 +7,12 @@ class TestCalculator(unittest.TestCase):
         calc = RpnCalculator() 
         self.assertEqual( calc.peek(), 0 )
 
+    def test_multiple_enter(self):
+        calc = RpnCalculator() 
+        calc.enter( 1 ) 
+        calc.enter( 2 ) 
+        self.assertEqual( calc.peek(), 2 )
+
     def test_enter_then_peek(self):
         calc = RpnCalculator() 
         calc.enter( 1 ) 
