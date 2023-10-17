@@ -3,7 +3,12 @@ from src.rpn.rpnstack import RpnStack
 
 class TestRpnStack(unittest.TestCase):
 
-    def test_getOperandFromEmptyStack(self):
+    def test_peekFromEmptyStack(self):
+        stack = RpnStack()
+        result = stack.peek()
+        self.assertEqual( result, 0 )
+
+    def test_popFromEmptyStack(self):
         stack = RpnStack()
         result = stack.pop()
         self.assertEqual( result, 0 )
@@ -11,7 +16,7 @@ class TestRpnStack(unittest.TestCase):
     def test_peekFromPush(self):
         stack = RpnStack()
         stack.push( 2 )
-        result = stack.peek();
+        result = stack.peek()
         self.assertEqual( result, 2 )
 
     def test_popFromPush(self):
