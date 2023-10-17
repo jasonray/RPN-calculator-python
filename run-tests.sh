@@ -1,1 +1,0 @@
-pipenv run python -m unittest discover -s ./src/test/rpn -p "*test.py"
