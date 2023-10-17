@@ -56,17 +56,6 @@ class TestRpnStack(unittest.TestCase):
         result = stack.pop()
         self.assertEqual( result, 0 )
 
-    def test_pushPop(self):
-        stack = RpnStack()
-        stack.push( 2 )
-        result = stack.pop()
-        self.assertEqual( result, 2 )
-
-    def test_popEmptyStack(self):
-        stack = RpnStack()        
-        result = stack.pop()
-        self.assertEqual( result, 0 )
-
     def test_pushpushpop(self):
         stack = RpnStack()        
         stack.push (2)
