@@ -22,18 +22,16 @@ class TestRpnStack(unittest.TestCase):
         result = stack.pop()
         self.assertEqual( result, 5 )
 
-#     @Test
-#     public void multiplePops() {
-#         RpnStack stack = new RpnStack();
-#         stack.push( 2 );
-#         stack.push( 5 );
+    def test_multiplePops(self):
+        stack = RpnStack()
+        stack.push( 2 )
+        stack.push( 5 )
 
-#         int result = stack.pop();
-#         assertEquals( 5, result );
+        result = stack.pop()
+        self.assertEqual( result, 5 )
 
-#         result = stack.pop();
-#         assertEquals( 2, result );
-#     }
+        result = stack.pop()
+        self.assertEqual( result, 2 )
 
 #     @Test
 #     public void multiplePeeks() {

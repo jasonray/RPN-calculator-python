@@ -1,14 +1,17 @@
 
 class RpnStack:
 
-    lastnumber = 0
+    _stack = []
 
     def peek(self):
-        return self.lastnumber
+        return self.pop()
 
     def pop(self):
-        return self.lastnumber
+        if len(self._stack) == 0:
+            return 0
+        else:
+            return self._stack.pop()
 
     def push(self, number):
-        self.lastnumber = number
+        self._stack.append(number)
 
