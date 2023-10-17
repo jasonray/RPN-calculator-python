@@ -1,14 +1,17 @@
+from src.rpn.rpnstack import RpnStack
+
 
 class RpnCalculator:
 
-    lastnumber = 0;
+    def __init__(self):
+        self._stack = RpnStack()
 
     def enter(self, operand):
-        self.lastnumber = operand
+        self._stack.push(operand)
 
     def peek(self) -> int:
-        return self.lastnumber
+        return self._stack.peek()
 
     def clear(self):
-        self.lastnumber=0
+        self._stack = RpnStack()
     
