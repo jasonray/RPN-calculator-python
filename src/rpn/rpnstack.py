@@ -4,7 +4,11 @@ class RpnStack:
     _stack = []
 
     def peek(self):
-        return self.pop()
+        size = len(self._stack)
+        if size == 0:
+            return 0
+        else:
+            return self._stack[size-1]
 
     def pop(self):
         if len(self._stack) == 0:
