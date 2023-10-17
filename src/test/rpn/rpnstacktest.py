@@ -15,15 +15,12 @@ class TestRpnStack(unittest.TestCase):
         result = stack.peek();
         self.assertEqual( result, 2 )
 
-#     @Test
-#     public void popFromPush() {
-#         RpnStack stack = new RpnStack();
-#         stack.push( 2 );
-#         stack.push( 5 );
-
-#         int result = stack.pop();
-#         assertEquals( 5, result );
-#     }
+    def test_popFromPush(self):
+        stack = RpnStack()
+        stack.push( 2 )
+        stack.push( 5 )
+        result = stack.pop()
+        self.assertEqual( result, 5 )
 
 #     @Test
 #     public void multiplePops() {
