@@ -1,7 +1,8 @@
 
 class RpnStack:
 
-    _stack = []
+    def __init__(self):
+        self._stack=[]
 
     def peek(self):
         size = len(self._stack)
