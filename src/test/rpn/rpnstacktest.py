@@ -77,10 +77,3 @@ class TestRpnStack(unittest.TestCase):
         self.assertEqual( result, 1 )
         result = stack.pop()
         self.assertEqual( result, 2 )
-
-#     @Test
-#     public void peekFromEmptyStack() {
-#         RpnStack s = new RpnStack();
-#         assertEquals( 0, s.peek() );
-#     }
-# }
