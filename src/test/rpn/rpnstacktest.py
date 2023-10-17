@@ -62,3 +62,18 @@ class TestRpnStack(unittest.TestCase):
         stack.push (1)
         result = stack.pop()
         self.assertEqual( result, 1 )
+
+    def test_multi_instance(self):
+        stack1 = RpnStack()
+        stack2 = RpnStack()
+
+        stack1.push(1)
+        stack2.push(2)
+
+        self.assertEqual( stack1.peek(), 1 )
+        self.assertEqual( stack2.peek(), 2 )
+
+        self.assertEqual( stack1.pop(), 1 )
+
+        self.assertEqual( stack1.peek(), 0 )
+        self.assertEqual( stack2.peek(), 2 )
