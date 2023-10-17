@@ -52,12 +52,13 @@ class TestRpnStack(unittest.TestCase):
         result = stack.pop()
         self.assertEqual( result, 0 )
 
-#     @Test
-#     public void pushPop() {
-#         RpnStack s = new RpnStack();
-#         s.push( 1 );
-#         assertEquals( 1, s.pop() );
-#     }
+    def test_pushPop(self):
+        stack = RpnStack()
+        stack.push( 2 )
+        result = stack.pop()
+        self.assertEqual( result, 2 )
+
+
 
 #     @Test
 #     public void popEmptyStack() {
