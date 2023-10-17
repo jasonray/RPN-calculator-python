@@ -9,4 +9,6 @@ class RpnCalculator:
     def peek(self) -> int:
         return self.lastnumber
 
+    def clear(self):
+        self.lastnumber=0
     
