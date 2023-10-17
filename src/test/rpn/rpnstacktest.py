@@ -19,7 +19,7 @@ class TestRpnStack(unittest.TestCase):
         result = stack.peek()
         self.assertEqual( result, 2 )
 
-    def test_popFromPush(self):
+    def test_pushpop(self):
         stack = RpnStack()
         stack.push( 2 )
         stack.push( 5 )
