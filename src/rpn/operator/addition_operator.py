@@ -7,9 +7,8 @@ class AdditionOperator:
         pass
 
     def doOperation(self, numbers: RpnStack) -> int:
-        lhs = numbers.pop() 
-        rhs = numbers.pop() 
+        lhs = numbers.pop()
+        rhs = numbers.pop()
         result = lhs + rhs
         numbers.push(result)
-        return result 
-
+        return result
