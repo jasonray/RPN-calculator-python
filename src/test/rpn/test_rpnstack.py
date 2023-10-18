@@ -4,6 +4,23 @@ from src.rpn.rpnstack import RpnStack
 
 class TestRpnStack(unittest.TestCase):
 
+    def test_is_empty(self):
+        stack = RpnStack()
+        self.assertEqual(stack.is_empty(), True)
+
+    def test_is_not_empty(self):
+        stack = RpnStack()
+        stack.push(2)
+        self.assertEqual(stack.is_empty(), False)
+
+    def test_is_pushpop_is_empty(self):
+        stack = RpnStack()
+        self.assertEqual(stack.is_empty(), True)
+        stack.push(2)
+        self.assertEqual(stack.is_empty(), False)
+        stack.pop()
+        self.assertEqual(stack.is_empty(), True)
+
     def test_peekFromEmptyStack(self):
         stack = RpnStack()
         result = stack.peek()
