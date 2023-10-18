@@ -31,3 +31,10 @@ class TestAdd(unittest.TestCase):
         self.assertEqual(result, 5)
         result = calc.perform("+")
         self.assertEqual(result, 6)
+
+    def test_add_neg_numbers(self):
+        calc = RpnCalculator()
+        calc.enter(3)
+        calc.enter(-5)
+        result = calc.perform("+")
+        self.assertEqual(result, -2)
