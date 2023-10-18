@@ -1,7 +1,6 @@
 from src.rpn.rpnstack import RpnStack
 from src.rpn.operator.addition_operator import AdditionOperator
-
-
+from src.rpn.operator.subtraction_operator import SubtractionOperator
 
 class RpnCalculator:
 
@@ -15,7 +14,12 @@ class RpnCalculator:
         return self._stack.peek()
 
     def perform(self, operator) -> int:
-        operator = AdditionOperator()
+        opeator=None
+        if operator == "+":
+            operator = AdditionOperator()
+        elif operator == "-":
+            operator = SubtractionOperator()
+        
         result = operator.doOperation( self._stack )
         return result
 
