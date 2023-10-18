@@ -37,3 +37,12 @@ class TestDivision(unittest.TestCase):
         calc.enter(4)
         result = calc.perform("/")
         self.assertEqual(result, 1.5)
+
+    def test_result_on_stack(self):
+        calc = RpnCalculator()
+        calc.enter(6)
+        calc.enter(2)
+        result = calc.perform("/")
+        self.assertEqual(result, 3)
+
+        self.assertEqual(calc.peek(), 3)
