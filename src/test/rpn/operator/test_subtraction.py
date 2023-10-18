@@ -9,6 +9,12 @@ class TestAdd(unittest.TestCase):
         result = calc.perform("-")
         self.assertEqual(result, 0)
 
+    def test_subtract_one_numbers(self):
+        calc = RpnCalculator()
+        calc.enter(1)
+        result = calc.perform("-")
+        self.assertEqual(result, -1)
+
     def test_subtract_two_numbers(self):
         calc = RpnCalculator()
         calc.enter(20)
