@@ -1,7 +1,8 @@
 from src.rpn.rpnstack import RpnStack
+from src.rpn.operator.operator import Operator
 
 
-class AdditionOperator:
+class AdditionOperator(Operator):
 
     def __init__(self):
         pass
