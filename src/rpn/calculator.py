@@ -13,7 +13,7 @@ class RpnCalculator:
     def enter(self, operand):
         self._stack.push(operand)
 
-    def peek(self) -> int:
+    def read(self) -> int:
         return self._stack.peek()
 
     def perform(self, operatorCharacter: str) -> int:

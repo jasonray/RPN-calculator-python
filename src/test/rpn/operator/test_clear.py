@@ -9,14 +9,14 @@ class TestDivision(unittest.TestCase):
         calc = RpnCalculator()
         result = calc.perform("C")
         self.assertEqual(result, 0)
-        self.assertEqual(calc.peek(), 0)
+        self.assertEqual(calc.read(), 0)
 
     def test_clear_single(self):
         calc = RpnCalculator()
         calc.enter(1)
         result = calc.perform("C")
         self.assertEqual(result, 0)
-        self.assertEqual(calc.peek(), 0)
+        self.assertEqual(calc.read(), 0)
 
     def test_clear_list(self):
         calc = RpnCalculator()
@@ -29,4 +29,4 @@ class TestDivision(unittest.TestCase):
         calc.enter(1)
         result = calc.perform("C")
         self.assertEqual(result, 0)
-        self.assertEqual(calc.peek(), 0)
+        self.assertEqual(calc.read(), 0)

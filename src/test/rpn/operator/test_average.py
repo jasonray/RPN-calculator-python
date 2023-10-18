@@ -52,3 +52,12 @@ class TestAverage(unittest.TestCase):
         calc.enter(3)
         result = calc.perform("AVERAGE")
         self.assertEqual(result, 2)
+
+    def test_result_on_stack(self):
+        calc = RpnCalculator()
+        calc.enter(1)
+        calc.enter(3)
+        result = calc.perform("AVE")
+        self.assertEqual(result, 2)
+
+        self.assertEqual(calc.read(), 2)

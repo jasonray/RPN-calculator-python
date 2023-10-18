@@ -39,4 +39,4 @@ class TestAbsolute(unittest.TestCase):
         result = calc.perform("||")
         self.assertEqual(result, 1)
 
-        self.assertEqual(calc.peek(), 1)
+        self.assertEqual(calc.read(), 1)

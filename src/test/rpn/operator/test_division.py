@@ -45,4 +45,4 @@ class TestDivision(unittest.TestCase):
         result = calc.perform("/")
         self.assertEqual(result, 3)
 
-        self.assertEqual(calc.peek(), 3)
+        self.assertEqual(calc.read(), 3)

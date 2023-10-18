@@ -54,4 +54,4 @@ class TestAdd(unittest.TestCase):
         result = calc.perform("-")
         self.assertEqual(result, 10)
 
-        self.assertEqual(calc.peek(), 10)
+        self.assertEqual(calc.read(), 10)
