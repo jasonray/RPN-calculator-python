@@ -21,3 +21,10 @@ class TestAdd(unittest.TestCase):
         calc.enter(10)
         result = calc.perform("-")
         self.assertEqual(result, 10)
+
+    def test_subtract_one_number_twice(self):
+        calc = RpnCalculator()
+        calc.enter(1)
+        result = calc.perform("-")
+        result = calc.perform("-")
+        self.assertEqual(result, 1)
