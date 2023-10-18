@@ -12,3 +12,7 @@ class SubtractionOperator:
         result = lhs - rhs
         numbers.push(result)
         return result
+
+    def handlesOperatorCharacter(self, operand) -> bool:
+        MINUS = "-"
+        return operand == MINUS
