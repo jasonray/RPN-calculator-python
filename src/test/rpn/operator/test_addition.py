@@ -38,3 +38,12 @@ class TestAdd(unittest.TestCase):
         calc.enter(-5)
         result = calc.perform("+")
         self.assertEqual(result, -2)
+
+    def test_result_on_stack(self):
+        calc = RpnCalculator()
+        calc.enter(1)
+        calc.enter(2)
+        result = calc.perform("+")
+        self.assertEqual(result, 3)
+
+        self.assertEqual(calc.peek(), 3)
