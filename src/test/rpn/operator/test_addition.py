@@ -21,3 +21,13 @@ class TestAdd(unittest.TestCase):
         calc.enter(1)
         result = calc.perform("+")
         self.assertEqual(result, 1)
+
+    def test_add_three_numbers(self):
+        calc = RpnCalculator()
+        calc.enter(1)
+        calc.enter(2)
+        calc.enter(3)
+        result = calc.perform("+")
+        self.assertEqual(result, 5)
+        result = calc.perform("+")
+        self.assertEqual(result, 6)
