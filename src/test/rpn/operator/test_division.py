@@ -1,3 +1,4 @@
+import pytest
 import unittest
 from src.rpn.calculator import RpnCalculator
 
@@ -17,4 +18,8 @@ class TestDivision(unittest.TestCase):
         result = calc.perform("/")
         self.assertEqual(result, 0)
 
+    def test_divide_no_number(self):
+        calc = RpnCalculator()
+        with pytest.raises(Exception) as e_info:
+            calc.perform("/")
         
