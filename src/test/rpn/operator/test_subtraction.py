@@ -4,6 +4,11 @@ from src.rpn.calculator import RpnCalculator
 
 class TestAdd(unittest.TestCase):
 
+    def test_subtract_no_numbers(self):
+        calc = RpnCalculator()
+        result = calc.perform("-")
+        self.assertEqual(result, 0)
+
     def test_subtract_two_numbers(self):
         calc = RpnCalculator()
         calc.enter(20)
