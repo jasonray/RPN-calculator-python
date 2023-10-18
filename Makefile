@@ -41,7 +41,7 @@ lint: check-format
 	pipenv run pylint -r n src
 
 test: build dev_deps
-	pipenv run python -m pytest
+	pipenv run python -m pytest -v
 
 build: clean deps
 
