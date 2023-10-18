@@ -9,10 +9,13 @@ class OperatorRegistry:
 
     def __init__(self):
         self._registry = []
-        self._registry.append(AdditionOperator())
-        self._registry.append(SubtractionOperator())
-        self._registry.append(AbsoluteOperator())
-        self._registry.append(DivisionOperator())
+        self._register(AdditionOperator())
+        self._register(SubtractionOperator())
+        self._register(AbsoluteOperator())
+        self._register(DivisionOperator())
+
+    def _register(self, operator):
+        self._registry.append(operator)
 
     def getOperator(self, operatorCharacter: str) -> Operator:
         relevantOperator = None
