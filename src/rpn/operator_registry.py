@@ -4,7 +4,7 @@ from src.rpn.operator.subtraction_operator import SubtractionOperator
 from src.rpn.operator.absolute_operator import AbsoluteOperator
 from src.rpn.operator.division_operator import DivisionOperator
 from src.rpn.operator.average_operator import AverageOperator
-
+from src.rpn.operator.clear_operator import ClearOperator
 
 class OperatorRegistry:
 
@@ -15,6 +15,7 @@ class OperatorRegistry:
         self._register(AbsoluteOperator())
         self._register(DivisionOperator())
         self._register(AverageOperator())
+        self._register(ClearOperator())
 
     def _register(self, operator):
         self._registry.append(operator)
