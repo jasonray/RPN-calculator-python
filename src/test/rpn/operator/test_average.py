@@ -8,3 +8,9 @@ class TestAverage(unittest.TestCase):
         calc = RpnCalculator()
         result = calc.perform("AVE")
         self.assertEqual(result, 0)
+
+    def test_average_one_number(self):
+        calc = RpnCalculator()
+        calc.push(1)
+        result = calc.perform("AVE")
+        self.assertEqual(result, 1)
