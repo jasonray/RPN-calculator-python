@@ -28,3 +28,21 @@ class TestAdd(unittest.TestCase):
         result = calc.perform("-")
         result = calc.perform("-")
         self.assertEqual(result, 1)
+
+    def test_subtract_with_extra_on_stack(self):
+        calc = RpnCalculator()
+        calc.enter(10)
+        calc.enter(6)
+        calc.enter(2)
+        result = calc.perform("-")
+        self.assertEqual(result, 4)
+
+    def test_subtract_three(self):
+        calc = RpnCalculator()
+        calc.enter(9)
+        calc.enter(6)
+        calc.enter(2)
+        result = calc.perform("-")
+        self.assertEqual(result, 4)
+        result = calc.perform("-")
+        self.assertEqual(result, 5)    
