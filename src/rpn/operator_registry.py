@@ -4,6 +4,7 @@ from src.rpn.operator.subtraction_operator import SubtractionOperator
 from src.rpn.operator.absolute_operator import AbsoluteOperator
 from src.rpn.operator.division_operator import DivisionOperator
 
+
 class OperatorRegistry:
 
     def __init__(self):
