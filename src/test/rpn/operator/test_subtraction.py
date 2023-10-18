@@ -45,4 +45,4 @@ class TestAdd(unittest.TestCase):
         result = calc.perform("-")
         self.assertEqual(result, 4)
         result = calc.perform("-")
-        self.assertEqual(result, 5)    
+        self.assertEqual(result, 5)
