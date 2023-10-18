@@ -23,3 +23,10 @@ class TestDivision(unittest.TestCase):
         with pytest.raises(Exception) as e_info:
             calc.perform("/")
         
+    def test_divide_two_numbers_with_three_on_stack(self):
+        calc = RpnCalculator()
+        calc.enter(16)
+        calc.enter(8)
+        calc.enter(2)
+        result = calc.perform("/")
+        self.assertEqual(result, 4)
