@@ -8,7 +8,7 @@ class AbsoluteOperator(Operator):
         operand = numbers.pop()
         result = operand
         if result < 0:
-            result = -1 * result  
+            result = -1 * result
         numbers.push(result)
         return result
 
