@@ -6,6 +6,7 @@ from src.rpn.operator.division_operator import DivisionOperator
 from src.rpn.operator.average_operator import AverageOperator
 from src.rpn.operator.clear_operator import ClearOperator
 
+
 class OperatorRegistry:
 
     def __init__(self):
