@@ -30,3 +30,10 @@ class TestDivision(unittest.TestCase):
         calc.enter(2)
         result = calc.perform("/")
         self.assertEqual(result, 4)
+
+    def test_divide_fractional(self):
+        calc = RpnCalculator()
+        calc.enter(6)
+        calc.enter(4)
+        result = calc.perform("/")
+        self.assertEqual(result, 1.5)
