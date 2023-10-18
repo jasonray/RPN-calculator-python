@@ -6,7 +6,7 @@ class TestAdd(unittest.TestCase):
 
     def test_add_two_numbers(self):
         calc = RpnCalculator()
-        calc.enter(30)
-        calc.enter(4)
+        calc.enter(1)
+        calc.enter(2)
         result = calc.perform("+")
-        self.assertEqual(result, 34)
+        self.assertEqual(result, 3)
