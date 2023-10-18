@@ -22,7 +22,7 @@ class TestDivision(unittest.TestCase):
         calc = RpnCalculator()
         with pytest.raises(Exception) as e_info:
             calc.perform("/")
-        
+
     def test_divide_two_numbers_with_three_on_stack(self):
         calc = RpnCalculator()
         calc.enter(16)
