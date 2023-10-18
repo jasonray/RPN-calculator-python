@@ -10,3 +10,11 @@ class TestDivision(unittest.TestCase):
         calc.enter(2)
         result = calc.perform("/")
         self.assertEqual(result, 3)
+
+    def test_divide_one_number(self):
+        calc = RpnCalculator()
+        calc.enter(2)
+        result = calc.perform("/")
+        self.assertEqual(result, 0)
+
+        
