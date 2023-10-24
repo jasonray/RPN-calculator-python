@@ -18,7 +18,8 @@ jobs:
       uses: gabrielfalcao/pyenv-action@v11
       with:
         default: "${{ matrix.python }}"
-        command: pip install -U pip  # upgrade pip after installing python
+        command: pyenv update
+        #command: pip install -U pip  # upgrade pip after installing python
 
     - name: Run tests
       run: make test
