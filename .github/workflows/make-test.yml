@@ -13,6 +13,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-
+    - name: Install pipenv
+      run: pip install pipenv
     - name: test
       run: make test
