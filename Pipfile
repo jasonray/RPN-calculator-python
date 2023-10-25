@@ -6,6 +6,7 @@ name = "pypi"
 [packages]
 yapf = "*"
 pytest = "*"
+yapf = "*"
 
 [dev-packages]
 
