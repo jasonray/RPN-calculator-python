@@ -55,3 +55,4 @@ jupyter: deps dev_deps
 
 python-version:
 	pyenv version
+	pipenv run python --version	
