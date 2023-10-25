@@ -16,9 +16,11 @@ jobs:
       uses: gabrielfalcao/pyenv-action@v11
       with:
         default: "${{ matrix.python }}"
-        command: |
-          pip install -U pip
-          pip install --user pipenv
+        command: pip install -U pip
+          
+
+    - name: Install pipenv
+      run: pip install --user pipenv
 
     - name: Install dependencies
       run: make deps
