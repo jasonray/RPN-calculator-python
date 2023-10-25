@@ -1,8 +1,5 @@
 from src.rpn.rpnstack import RpnStack
 from src.rpn.operator_registry import OperatorRegistry
-from src.rpn.operator.addition_operator import AdditionOperator
-from src.rpn.operator.subtraction_operator import SubtractionOperator
-
 
 class RpnCalculator:
 

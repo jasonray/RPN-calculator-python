@@ -6,16 +6,16 @@ class AverageOperator(Operator):
 
     def doOperation(self, numbers: RpnStack) -> int:
         counter = 0
-        sum = 0
+        total = 0
 
         while not numbers.is_empty():
             counter += 1
-            sum += numbers.pop()
+            total += numbers.pop()
 
         if counter == 0:
             result = 0
         else:
-            result = sum / counter
+            result = total / counter
 
         numbers.push(result)
         return result

@@ -20,7 +20,7 @@ class TestDivision(unittest.TestCase):
 
     def test_divide_no_number(self):
         calc = RpnCalculator()
-        with pytest.raises(Exception) as e_info:
+        with pytest.raises(Exception):
             calc.perform("/")
 
     def test_divide_two_numbers_with_three_on_stack(self):
