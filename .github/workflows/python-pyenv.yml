@@ -16,7 +16,9 @@ jobs:
       uses: gabrielfalcao/pyenv-action@v11
       with:
         default: "${{ matrix.python }}"
-        command: pip install -U pip  # upgrade pip after installing python
+        command: |
+          pip install -U pip
+          pip install --user pipenv
 
     - name: Install dependencies
       run: make deps
