@@ -19,7 +19,7 @@ jobs:
         command: pip install -U pip  # upgrade pip after installing python
 
     - name: Install dependencies
-      run: pyenv deps
+      run: make deps
 
     - name: Run tests
       run: pytest .
