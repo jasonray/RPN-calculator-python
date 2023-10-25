@@ -1,5 +1,5 @@
 name: Using
-on: [push, pull_request]
+on: pull_request
 
 jobs:
   my_python_job:
@@ -19,7 +19,7 @@ jobs:
         command: pip install -U pip  # upgrade pip after installing python
 
     - name: Install dependencies
-      run: pip install -r requirements.txt
+      run: pyenv deps
 
     - name: Run tests
       run: pytest .
