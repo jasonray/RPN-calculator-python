@@ -1,3 +1,6 @@
+[![Using](https://github.com/jasonray/RPN-calculator-python/actions/workflows/python-pyenv.yml/badge.svg)](https://github.com/jasonray/RPN-calculator-python/actions/workflows/python-pyenv.yml)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/f3d3d959fff544318d28406f7a4236d6)](https://app.codacy.com/gh/jasonray/RPN-calculator-python/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
+
 # RPN-calculator-python
 
 The [RPN](http://en.wikipedia.org/wiki/Reverse_Polish_notation) calculator implementation is a good exercise for working through a languages capabilities and exploring OO strategies.
