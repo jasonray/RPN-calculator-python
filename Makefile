@@ -26,7 +26,7 @@ clean-test:
 	rm -fr htmlcov/
 
 deps: .venv
-	pipenv install && pipenv requirements --hash > requirements.txt && pipenv run pip install --upgrade -r requirements.txt -t ./libs && rm requirements.txt
+	pipenv install
 
 dev_deps: .venv
 	pipenv install --dev
