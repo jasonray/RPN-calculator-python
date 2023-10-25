@@ -1,4 +1,3 @@
-from src.rpn.rpnstack import RpnStack
 from src.rpn.operator.binary_operator import BinaryOperator
 
 
