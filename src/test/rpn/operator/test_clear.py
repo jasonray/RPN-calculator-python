@@ -1,4 +1,3 @@
-import pytest
 import unittest
 from src.rpn.calculator import RpnCalculator
 
