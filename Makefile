@@ -5,7 +5,7 @@ default: clean dev_deps deps test clean lint build
 all_but_tests: clean dev_deps deps clean lint build
 
 .venv:
-	pipenv --venv || pipenv --python 3.10
+	pipenv --venv || pipenv --python 3.11
 
 clean: clean-build clean-pyc clean-test
 
