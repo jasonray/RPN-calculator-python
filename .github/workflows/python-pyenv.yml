@@ -8,7 +8,7 @@ jobs:
     strategy:
       matrix:
         python:
-          - 3.11.6
+          - 3.9
 
     steps:
     - uses: actions/checkout@v3
@@ -17,7 +17,10 @@ jobs:
       with:
         default: "${{ matrix.python }}"
         command: pip install -U pip
-          
+
+    - name: What versions of python are available through pyenv
+      run: pyenv install --list
+  
 
     - name: Install pipenv
       run: pip install --user pipenv
