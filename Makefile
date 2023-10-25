@@ -5,7 +5,7 @@ default: clean dev_deps deps test clean lint build
 all_but_tests: clean dev_deps deps clean lint build
 
 .venv:
-	pipenv --venv || pipenv --python 3.9
+	pipenv --venv || pipenv --python 3.10
 
 clean: clean-build clean-pyc clean-test
 
@@ -26,7 +26,7 @@ clean-test:
 	rm -fr htmlcov/
 
 deps: .venv
-	pipenv install
+	pipenv install && pipenv requirements --hash > requirements.txt && pipenv run pip install --upgrade -r requirements.txt -t ./libs && rm requirements.txt
 
 dev_deps: .venv
 	pipenv install --dev
