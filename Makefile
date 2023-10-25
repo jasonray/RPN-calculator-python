@@ -7,23 +7,7 @@ all_but_tests: clean dev_deps deps clean lint build
 .venv:
 	pipenv --venv || pipenv --python 3.11
 
-clean: clean-build clean-pyc clean-test
-
-clean-build:
-	rm -fr dist/
-	rm -fr libs/
-	rm -fr src/tests/lrfdt/deps
-
-clean-pyc:
-	find . -name '*.pyc' -exec rm -f {} +
-	find . -name '*.pyo' -exec rm -f {} +
-	find . -name '*~' -exec rm -f {} +
-	find . -name '__pycache__' -exec rm -fr {} +
-
-clean-test:
-	rm -fr .tox/
-	rm -f .coverage
-	rm -fr htmlcov/
+clean: 
 
 deps: .venv
 	pipenv install
