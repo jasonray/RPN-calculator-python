@@ -1,0 +1,35 @@
+name: Using
+on: pull_request
+
+jobs:
+  my_python_job:
+    name: "Python"
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python:
+          - 3.9
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Install python version
+      uses: gabrielfalcao/pyenv-action@v11
+      with:
+        default: "${{ matrix.python }}"
+        command: pip install -U pip
+
+    - name: What versions of python are available through pyenv
+      run: pyenv install --list
+  
+
+    - name: Install pipenv
+      run: pip install --user pipenv
+
+    - name: Install dependencies
+      run: make build
+
+    - name: Check version
+      run: make python-version
+
+    - name: Run tests
+      run: make test
