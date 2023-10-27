@@ -19,6 +19,12 @@ class RpnStack:
             result = self._stack.pop()
         return result
 
+    def pop_all(self):
+        result = []
+        while not self.is_empty():
+            result.append(self.pop())
+        return result
+
     def push(self, number):
         self._stack.append(number)
 
