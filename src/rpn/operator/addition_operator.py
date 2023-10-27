@@ -1,5 +1,6 @@
 from src.rpn.operator.binary_operator import BinaryOperator
 
+
 class AdditionOperator(BinaryOperator):
 
     def __init__(self):
