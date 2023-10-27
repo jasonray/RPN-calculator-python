@@ -2,7 +2,7 @@ import unittest
 from src.rpn.calculator import RpnCalculator
 
 
-class TestAdd(unittest.TestCase):
+class TestMax(unittest.TestCase):
 
     def test_no_numbers(self):
         calc = RpnCalculator()
