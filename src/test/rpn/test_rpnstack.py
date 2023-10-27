@@ -95,3 +95,22 @@ class TestRpnStack(unittest.TestCase):
 
         self.assertEqual(stack1.peek(), 0)
         self.assertEqual(stack2.peek(), 2)
+
+    def test_popall_0(self):
+        stack = RpnStack()
+        result = stack.pop_all()
+        self.assertEqual(result, [])
+
+    def test_popall_2(self):
+        stack = RpnStack()
+        stack.push(1)
+        stack.push(2)
+        result = stack.pop_all()
+        self.assertEqual(result, [2, 1])
+
+    def test_popall_5(self):
+        stack = RpnStack()
+        for n in range(5):
+            stack.push(n)
+        result = stack.pop_all()
+        self.assertEqual(result, [4, 3, 2, 1, 0])

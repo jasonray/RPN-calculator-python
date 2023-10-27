@@ -5,6 +5,7 @@ from src.rpn.operator.absolute_operator import AbsoluteOperator
 from src.rpn.operator.division_operator import DivisionOperator
 from src.rpn.operator.average_operator import AverageOperator
 from src.rpn.operator.clear_operator import ClearOperator
+from src.rpn.operator.sum_operator import SumOperator
 
 
 class OperatorRegistry:
@@ -17,6 +18,7 @@ class OperatorRegistry:
         self._register(DivisionOperator())
         self._register(AverageOperator())
         self._register(ClearOperator())
+        self._register(SumOperator())
 
     def _register(self, operator):
         self._registry.append(operator)
