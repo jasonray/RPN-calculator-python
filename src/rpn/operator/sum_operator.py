@@ -9,6 +9,7 @@ class SumOperator(Operator):
         values = numbers.pop_all()
         result = 0
         if values:
+            # yes, i could use sum(), but wanted to have an example of reduce
             result = int(functools.reduce(lambda x, y: x + y, values))
             numbers.push(result)
         return result
