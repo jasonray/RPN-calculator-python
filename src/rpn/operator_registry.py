@@ -1,3 +1,4 @@
+from src.rpn.operator.double_operator import DoubleOperator
 from src.rpn.operator.operator import Operator
 from src.rpn.operator.addition_operator import AdditionOperator
 from src.rpn.operator.subtraction_operator import SubtractionOperator
@@ -19,6 +20,7 @@ class OperatorRegistry:
         self._register(AverageOperator())
         self._register(ClearOperator())
         self._register(SumOperator())
+        self._register(DoubleOperator())
 
     def _register(self, operator):
         self._registry.append(operator)
@@ -28,4 +30,6 @@ class OperatorRegistry:
         for operator in self._registry:
             if operator.handlesOperatorCharacter(operatorCharacter):
                 relevantOperator = operator
+        if not relevantOperator:
+            raise Exception("No operator for command", operatorCharacter)
         return relevantOperator
