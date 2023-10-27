@@ -1,6 +1,7 @@
 from src.rpn.rpnstack import RpnStack
 from src.rpn.operator_registry import OperatorRegistry
 
+
 class RpnCalculator:
 
     def __init__(self):
