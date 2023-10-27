@@ -22,12 +22,9 @@ class OperatorRegistry:
         self._register(AverageOperator())
         self._register(ClearOperator())
         self._register(SumOperator())
-<<<<<<< HEAD
         self._register(DoubleOperator())
-=======
         self._register(MaxOperator())
         self._register(MinOperator())
->>>>>>> main
 
     def _register(self, operator):
         self._registry.append(operator)
