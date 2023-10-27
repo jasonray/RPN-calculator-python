@@ -7,6 +7,8 @@ from src.rpn.operator.division_operator import DivisionOperator
 from src.rpn.operator.average_operator import AverageOperator
 from src.rpn.operator.clear_operator import ClearOperator
 from src.rpn.operator.sum_operator import SumOperator
+from src.rpn.operator.min_operator import MinOperator
+from src.rpn.operator.max_operator import MaxOperator
 
 
 class OperatorRegistry:
@@ -20,7 +22,12 @@ class OperatorRegistry:
         self._register(AverageOperator())
         self._register(ClearOperator())
         self._register(SumOperator())
+<<<<<<< HEAD
         self._register(DoubleOperator())
+=======
+        self._register(MaxOperator())
+        self._register(MinOperator())
+>>>>>>> main
 
     def _register(self, operator):
         self._registry.append(operator)
