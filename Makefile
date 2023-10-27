@@ -17,6 +17,9 @@ format: dev_deps
 lint: check-format
 	pylint -r n src
 
+lint-no-error: 
+	pylint --exit-zero -r n src
+
 test: build dev_deps
 	python3 -m pytest -v
 
