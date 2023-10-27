@@ -18,19 +18,31 @@ This implementation utilizes Python.
 * brew
   * `xcode-select --install`
   * `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
-* pyenv
-  * `brew install pyenv`
-  * `echo 'export PATH=$(pyenv root)/bin:$PATH' >> ~/.bash_profile`
-  * `echo 'eval "$(pyenv init -)"' >> ~/.bash_profile`
-  * `source ~/.bash_profile`
-* pipenv
-  * `brew install pipenv`
+* python
+  * `brew install python`
 
 ### Unit Test
 To run the tests, run the following command:
 ``` bash
 make test
 ```
+
+### Check formatting
+To check style and formatting
+``` bash
+make lint
+```
+
+To check formatting
+``` bash
+make check-format
+```
+
+To auto format
+``` bash
+make format
+```
+
 
 ## To add a new operator
 1) Create a new operator implementation class.  Add this class to the `src/rpn/operators` directory.  Follow the conventation of `(operator name)-operator.py` (example: `addition-operator.py`).
