@@ -9,7 +9,7 @@ class TestMax(unittest.TestCase):
         result = calc.perform("max")
         self.assertEqual(result, 0)
 
-    def test_no_numbers(self):
+    def test_one_numbers(self):
         calc = RpnCalculator()
         calc.enter(1)
         result = calc.perform("max")
