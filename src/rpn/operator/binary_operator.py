@@ -12,4 +12,5 @@ class BinaryOperator(Operator):
         return result
 
     def doOperatorByOperands(self, lhs: int, rhs: int) -> int:
-        pass
+        ## this will be implemented by concrete class
+        return lhs + rhs
