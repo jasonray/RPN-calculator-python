@@ -35,4 +35,5 @@ jobs:
         make check-format
     - name: Check Style 
       run: |
-        make lint-no-error
+        # make lint-no-error
+        make lint
