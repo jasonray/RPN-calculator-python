@@ -4,7 +4,8 @@ from src.rpn.operator.monomial_operator import MonomialOperator
 class AbsoluteOperator(MonomialOperator):
 
     def doOperatorByOperand(self, n: int) -> int:
-        if result < 0:
+        result = n
+        if n < 0:
             result = -1 * result
         return result
 
