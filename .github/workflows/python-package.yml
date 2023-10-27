@@ -33,6 +33,6 @@ jobs:
     - name: Check Format 
       run: |
         make check-format
-    # - name: Check Style 
-    #   run: |
-    #     make lint
+    - name: Check Style 
+      run: |
+        make lint-no-error
