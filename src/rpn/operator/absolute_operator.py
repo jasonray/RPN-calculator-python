@@ -1,15 +1,12 @@
-from src.rpn.rpnstack import RpnStack
-from src.rpn.operator.operator import Operator
+from src.rpn.operator.monomial_operator import MonomialOperator
 
 
-class AbsoluteOperator(Operator):
+class AbsoluteOperator(MonomialOperator):
 
-    def doOperation(self, numbers: RpnStack) -> int:
-        operand = numbers.pop()
-        result = operand
-        if result < 0:
+    def doOperatorByOperand(self, n: int) -> int:
+        result = n
+        if n < 0:
             result = -1 * result
-        numbers.push(result)
         return result
 
     def handlesOperatorCharacter(self, operand) -> bool:
