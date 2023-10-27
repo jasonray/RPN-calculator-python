@@ -1,3 +1,4 @@
+from src.rpn.operator.max_operator import MaxOperator
 from src.rpn.operator.operator import Operator
 from src.rpn.operator.addition_operator import AdditionOperator
 from src.rpn.operator.subtraction_operator import SubtractionOperator
@@ -19,6 +20,7 @@ class OperatorRegistry:
         self._register(AverageOperator())
         self._register(ClearOperator())
         self._register(SumOperator())
+        self._register(MaxOperator())
 
     def _register(self, operator):
         self._registry.append(operator)
