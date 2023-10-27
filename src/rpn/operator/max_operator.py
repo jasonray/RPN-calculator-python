@@ -1,16 +1,12 @@
-from src.rpn.rpnstack import RpnStack
-from src.rpn.operator.operator import Operator
+from src.rpn.operator.stack_operator import StackOperator
 
 
-class MaxOperator(Operator):
+class MaxOperator(StackOperator):
 
-    def doOperation(self, numbers: RpnStack) -> int:
-        values = numbers.pop_all()
-        result = 0
-        if values:
-            result = max(values)
-        numbers.push(result)
+    def reduce_operation(self, x: int, y: int) -> int:
+        result = None
+        if x > y:
+            result = x
+        else:
+            result = y
         return result
-
-    def handlesOperatorCharacter(self, operand) -> bool:
-        return (operand == "max")
