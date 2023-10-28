@@ -20,7 +20,7 @@ class OperatorRegistry:
         self._register(AbsoluteOperator(), "||")
         self._register(DivisionOperator(), "/")
         self._register(AverageOperator(), ["ave", "average"])
-        self._register(ClearOperator(), ["C","CLEAR"])
+        self._register(ClearOperator(), ["C", "CLEAR"])
         self._register(SumOperator(), "sum")
         self._register(DoubleOperator(), "double")
         self._register(MaxOperator(), "max")
@@ -32,8 +32,7 @@ class OperatorRegistry:
                 self._register(operator, single_operator_symbol)
         else:
             if not operator_symbol:
-                raise Exception("Invalid operator character",
-                                operator_symbol)
+                raise Exception("Invalid operator character", operator_symbol)
             self._registry[operator_symbol.upper()] = operator
 
     def getOperator(self, operator_symbol: str) -> Operator:
