@@ -14,6 +14,3 @@ class AverageOperator(Operator):
             result = total / len(values)
             numbers.push(result)
         return result
-
-    def handlesOperatorCharacter(self, operand) -> bool:
-        return (operand == "AVE") | (operand == "AVERAGE")
