@@ -5,7 +5,7 @@ from src.rpn.rpnstack import RpnStack
 
 class SumOperator(Operator):
 
-    def doOperation(self, numbers: RpnStack) -> int:
+    def do_operation(self, numbers: RpnStack) -> int:
         values = numbers.pop_all()
         result = 0
         if values:

@@ -4,7 +4,7 @@ from src.rpn.operator.operator import Operator
 
 class BinaryOperator(Operator):
 
-    def doOperation(self, numbers: RpnStack) -> int:
+    def do_operation(self, numbers: RpnStack) -> int:
         rhs = numbers.pop()
         lhs = numbers.pop()
         result = self.doOperatorByOperands(lhs, rhs)

@@ -4,7 +4,7 @@ from src.rpn.operator.operator import Operator
 
 class MonomialOperator(Operator):
 
-    def doOperation(self, numbers: RpnStack) -> int:
+    def do_operation(self, numbers: RpnStack) -> int:
         n = numbers.pop()
         result = self.doOperatorByOperand(n)
         numbers.push(result)
