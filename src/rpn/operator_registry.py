@@ -20,7 +20,7 @@ class OperatorRegistry:
         self._register(AbsoluteOperator(), "||")
         self._register(DivisionOperator(), "/")
         self._register(AverageOperator(), ["ave", "average"])
-        self._register(ClearOperator(), "C")
+        self._register(ClearOperator(), ["C","CLEAR"])
         self._register(SumOperator(), "sum")
         self._register(DoubleOperator(), "double")
         self._register(MaxOperator(), "max")
