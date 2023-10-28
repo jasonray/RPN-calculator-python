@@ -42,7 +42,6 @@ class OperatorRegistry:
         self.print()
         relevantOperator = self._registry[operator_symbol.upper()]
         if not relevantOperator:
-            self.print()
             raise Exception("No operator for command", operator_symbol)
         return relevantOperator
 
