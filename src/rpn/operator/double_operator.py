@@ -6,5 +6,5 @@ class DoubleOperator(MonomialOperator):
     def __init__(self):
         pass
 
-    def doOperatorByOperand(self, n: int) -> int:
+    def do_operation__by_operand(self, n: int) -> int:
         return n * 2
