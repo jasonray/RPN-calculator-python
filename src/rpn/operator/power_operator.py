@@ -1,0 +1,11 @@
+import math
+from src.rpn.operator.binary_operator import BinaryOperator
+
+
+class PowerOperator(BinaryOperator):
+
+    def __init__(self):
+        pass
+
+    def doOperatorByOperands(self, lhs: int, rhs: int) -> int:
+        return math.pow(lhs, rhs)
