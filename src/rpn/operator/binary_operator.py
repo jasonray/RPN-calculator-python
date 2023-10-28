@@ -4,13 +4,13 @@ from src.rpn.operator.operator import Operator
 
 class BinaryOperator(Operator):
 
-    def doOperation(self, numbers: RpnStack) -> int:
+    def do_operation(self, numbers: RpnStack) -> int:
         rhs = numbers.pop()
         lhs = numbers.pop()
-        result = self.doOperatorByOperands(lhs, rhs)
+        result = self.do_operator_by_operands(lhs, rhs)
         numbers.push(result)
         return result
 
-    def doOperatorByOperands(self, lhs: int, rhs: int) -> int:
+    def do_operator_by_operands(self, lhs: int, rhs: int) -> int:
         ## this will be implemented by concrete class
         return lhs + rhs

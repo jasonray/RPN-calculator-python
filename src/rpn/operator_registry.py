@@ -37,7 +37,7 @@ class OperatorRegistry:
                 raise Exception("Invalid operator character", operator_symbol)
             self._registry[operator_symbol.upper()] = operator
 
-    def getOperator(self, operator_symbol: str) -> Operator:
+    def operator(self, operator_symbol: str) -> Operator:
         if not operator_symbol:
             raise Exception("Invalid operator character", operator_symbol)
         self.print()

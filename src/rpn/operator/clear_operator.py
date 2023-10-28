@@ -4,7 +4,7 @@ from src.rpn.operator.operator import Operator
 
 class ClearOperator(Operator):
 
-    def doOperation(self, numbers: RpnStack) -> int:
+    def do_operation(self, numbers: RpnStack) -> int:
         numbers.pop_all()
         return 0
 

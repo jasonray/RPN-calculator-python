@@ -5,7 +5,7 @@ from src.rpn.operator.operator import Operator
 
 class AverageOperator(Operator):
 
-    def doOperation(self, numbers: RpnStack) -> int:
+    def do_operation(self, numbers: RpnStack) -> int:
         values = numbers.pop_all()
         result = 0
         if values:
