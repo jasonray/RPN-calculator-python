@@ -8,7 +8,3 @@ class AbsoluteOperator(MonomialOperator):
         if n < 0:
             result = -1 * result
         return result
-
-    def handlesOperatorCharacter(self, operand) -> bool:
-        ABSOLUTE = "||"
-        return operand == ABSOLUTE
