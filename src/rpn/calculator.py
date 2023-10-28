@@ -25,7 +25,6 @@ class RpnCalculator:
                     self.perform(buffer_element)
         return self.read()
 
-
     def perform(self, operatorCharacter: str) -> int:
         operator = self._registry.operator(operatorCharacter)
         result = operator.do_operation(self._stack)
