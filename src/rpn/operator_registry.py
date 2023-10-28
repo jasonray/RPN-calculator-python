@@ -14,26 +14,36 @@ from src.rpn.operator.max_operator import MaxOperator
 class OperatorRegistry:
 
     def __init__(self):
-        self._registry = []
-        self._register(AdditionOperator())
-        self._register(SubtractionOperator())
-        self._register(AbsoluteOperator())
-        self._register(DivisionOperator())
-        self._register(AverageOperator())
-        self._register(ClearOperator())
-        self._register(SumOperator())
-        self._register(DoubleOperator())
-        self._register(MaxOperator())
-        self._register(MinOperator())
+        self._registry = {}
+        self._register(AdditionOperator(), "+")
+        self._register(SubtractionOperator(), "-")
+        self._register(AbsoluteOperator(), "||")
+        self._register(DivisionOperator(), "/")
+        self._register(AverageOperator(), ["ave","average"])
+        self._register(ClearOperator(), "C")
+        self._register(SumOperator(), "sum")
+        self._register(DoubleOperator(), "double")
+        self._register(MaxOperator(), "max")
+        self._register(MinOperator(), "min")
 
-    def _register(self, operator):
-        self._registry.append(operator)
+    def _register(self, operator: Operator, operatorCharacter: str):
+        if isinstance(operatorCharacter, list):
+            for singleOperatorCharacter in operatorCharacter:
+                self._register(operator, singleOperatorCharacter)
+        else:
+            if not operatorCharacter:
+                raise Exception("Invalid operator character", operatorCharacter)
+            self._registry[operatorCharacter.upper()] = operator
 
     def getOperator(self, operatorCharacter: str) -> Operator:
-        relevantOperator = None
-        for operator in self._registry:
-            if operator.handlesOperatorCharacter(operatorCharacter):
-                relevantOperator = operator
+        if not operatorCharacter:
+            raise Exception("Invalid operator character", operatorCharacter)
+        self.print()
+        relevantOperator = self._registry[operatorCharacter.upper()]
         if not relevantOperator:
+            self.print()
             raise Exception("No operator for command", operatorCharacter)
         return relevantOperator
+
+    def print(self) -> str:
+        print(self._registry)
