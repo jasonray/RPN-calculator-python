@@ -8,6 +8,3 @@ class DoubleOperator(MonomialOperator):
 
     def doOperatorByOperand(self, n: int) -> int:
         return n * 2
-
-    def handlesOperatorCharacter(self, operand) -> bool:
-        return operand == "double"

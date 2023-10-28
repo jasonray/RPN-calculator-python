@@ -8,7 +8,3 @@ class AdditionOperator(BinaryOperator):
 
     def doOperatorByOperands(self, lhs: int, rhs: int) -> int:
         return lhs + rhs
-
-    def handlesOperatorCharacter(self, operand) -> bool:
-        PLUS = "+"
-        return operand == PLUS

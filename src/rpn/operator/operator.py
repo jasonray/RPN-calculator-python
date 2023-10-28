@@ -5,6 +5,3 @@ class Operator:
 
     def doOperation(self, numbers: RpnStack) -> int:
         pass
-
-    def handlesOperatorCharacter(self, operand) -> bool:
-        pass

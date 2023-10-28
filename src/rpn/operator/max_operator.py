@@ -10,6 +10,3 @@ class MaxOperator(StackOperator):
         else:
             result = y
         return result
-
-    def handlesOperatorCharacter(self, operand) -> bool:
-        return operand == "max"

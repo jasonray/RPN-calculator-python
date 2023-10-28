@@ -8,6 +8,3 @@ class DivisionOperator(BinaryOperator):
 
     def doOperatorByOperands(self, lhs: int, rhs: int) -> int:
         return lhs / rhs
-
-    def handlesOperatorCharacter(self, operand) -> bool:
-        return operand == "/"

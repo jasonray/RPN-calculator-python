@@ -13,6 +13,3 @@ class SumOperator(Operator):
             result = int(functools.reduce(lambda x, y: x + y, values))
             numbers.push(result)
         return result
-
-    def handlesOperatorCharacter(self, operand) -> bool:
-        return operand == "sum"

@@ -17,7 +17,7 @@ class TestDivision(unittest.TestCase):
         self.assertEqual(result, 0)
         self.assertEqual(calc.read(), 0)
 
-    def test_clear_list(self):
+    def test_clear_list_using_C(self):
         calc = RpnCalculator()
         calc.enter(1)
         calc.enter(1)
@@ -27,5 +27,18 @@ class TestDivision(unittest.TestCase):
         calc.enter(1)
         calc.enter(1)
         result = calc.perform("C")
+        self.assertEqual(result, 0)
+        self.assertEqual(calc.read(), 0)
+
+    def test_clear_list_using_clear(self):
+        calc = RpnCalculator()
+        calc.enter(1)
+        calc.enter(1)
+        calc.enter(1)
+        calc.enter(1)
+        calc.enter(1)
+        calc.enter(1)
+        calc.enter(1)
+        result = calc.perform("CLEAR")
         self.assertEqual(result, 0)
         self.assertEqual(calc.read(), 0)
