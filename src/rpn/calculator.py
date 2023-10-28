@@ -15,7 +15,7 @@ class RpnCalculator:
         return self._stack.peek()
 
     def perform(self, operatorCharacter: str) -> int:
-        operator = self._registry.getOperator(operatorCharacter)
+        operator = self._registry.operator(operatorCharacter)
         result = operator.do_operation(self._stack)
         return result
 
