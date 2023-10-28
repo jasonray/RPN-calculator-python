@@ -26,24 +26,24 @@ class OperatorRegistry:
         self._register(MaxOperator(), "max")
         self._register(MinOperator(), "min")
 
-    def _register(self, operator: Operator, operator_character: str):
-        if isinstance(operator_character, list):
-            for single_operator_character in operator_character:
-                self._register(operator, single_operator_character)
+    def _register(self, operator: Operator, operator_symbol: str):
+        if isinstance(operator_symbol, list):
+            for single_operator_symbol in operator_symbol:
+                self._register(operator, single_operator_symbol)
         else:
-            if not operator_character:
+            if not operator_symbol:
                 raise Exception("Invalid operator character",
-                                operator_character)
-            self._registry[operator_character.upper()] = operator
+                                operator_symbol)
+            self._registry[operator_symbol.upper()] = operator
 
-    def getOperator(self, operator_character: str) -> Operator:
-        if not operator_character:
-            raise Exception("Invalid operator character", operator_character)
+    def getOperator(self, operator_symbol: str) -> Operator:
+        if not operator_symbol:
+            raise Exception("Invalid operator character", operator_symbol)
         self.print()
-        relevantOperator = self._registry[operator_character.upper()]
+        relevantOperator = self._registry[operator_symbol.upper()]
         if not relevantOperator:
             self.print()
-            raise Exception("No operator for command", operator_character)
+            raise Exception("No operator for command", operator_symbol)
         return relevantOperator
 
     def print(self) -> str:
