@@ -57,3 +57,10 @@ class TestMin(unittest.TestCase):
         self.assertEqual(result, 5)
 
         self.assertEqual(calc.read(), 5)
+
+    def test_buffer(self):
+        calc = RpnCalculator()
+        result = calc.perform_buffer("1 5 3 min")
+        expected = 1
+        self.assertEqual(result, expected)
+        self.assertEqual(calc.read(), expected)
