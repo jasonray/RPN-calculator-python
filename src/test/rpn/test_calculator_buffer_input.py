@@ -27,7 +27,7 @@ class TestBufferInput(unittest.TestCase):
         self.run_test("4 5 + 6 *", 54)
 
     def test_buffer_add_mult2(self):
-        self.run_test("6 4 5 + *",54)
+        self.run_test("6 4 5 + *", 54)
 
     # def test_buffer_add_neg(self):
     #     self.run_test("-1 -2 +",-3)
