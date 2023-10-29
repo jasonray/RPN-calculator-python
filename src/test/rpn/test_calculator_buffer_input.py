@@ -17,6 +17,12 @@ class TestBufferInput(unittest.TestCase):
     def test_buffer_input_zero(self):
         self.run_test("0", 0)
 
+    def test_buffer_single_number(self):
+        self.run_test("2", 2)
+
+    def test_buffer_single_neg_number(self):
+        self.run_test("-2", -2)
+
     def test_buffer_input_add(self):
         self.run_test("1 2 +", 3)
 
@@ -29,8 +35,8 @@ class TestBufferInput(unittest.TestCase):
     def test_buffer_add_mult2(self):
         self.run_test("6 4 5 + *", 54)
 
-    # def test_buffer_add_neg(self):
-    #     self.run_test("-1 -2 +",-3)
+    def test_buffer_add_neg(self):
+        self.run_test("-1 -2 +", -3)
 
     def test_buffer_extra_two_entries(self):
         calc = RpnCalculator()
