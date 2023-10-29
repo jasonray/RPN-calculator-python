@@ -46,3 +46,9 @@ class TestDivision(unittest.TestCase):
         self.assertEqual(result, 3)
 
         self.assertEqual(calc.read(), 3)
+
+    def test_buffer(self):
+        calc = RpnCalculator()
+        result = calc.perform_buffer("6 4 /")
+        self.assertEqual(result, 1.5)
+        self.assertEqual(calc.read(), 1.5)
