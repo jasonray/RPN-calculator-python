@@ -47,3 +47,10 @@ class TestAdd(unittest.TestCase):
         self.assertEqual(result, 3)
 
         self.assertEqual(calc.read(), 3)
+
+    def test_buffer(self):
+        calc = RpnCalculator()
+        result = calc.perform_buffer("2 3 +")
+        expected = 5
+        self.assertEqual(result, expected)
+        self.assertEqual(calc.read(), expected)
