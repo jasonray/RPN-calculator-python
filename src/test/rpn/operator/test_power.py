@@ -42,3 +42,10 @@ class TestDivision(unittest.TestCase):
         self.assertEqual(result, 32)
 
         self.assertEqual(calc.read(), 32)
+
+    def test_buffer(self):
+        calc = RpnCalculator()
+        result = calc.perform_buffer("2 5 pow")
+        expected = 32
+        self.assertEqual(result, expected)
+        self.assertEqual(calc.read(), expected)

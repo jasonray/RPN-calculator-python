@@ -61,3 +61,10 @@ class TestAverage(unittest.TestCase):
         self.assertEqual(result, 2)
 
         self.assertEqual(calc.read(), 2)
+
+    def test_buffer(self):
+        calc = RpnCalculator()
+        result = calc.perform_buffer("1 5 3 ave")
+        expected = 3
+        self.assertEqual(result, expected)
+        self.assertEqual(calc.read(), expected)

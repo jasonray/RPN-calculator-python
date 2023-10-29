@@ -19,11 +19,22 @@ class RpnCalculator:
             buffer_elements = buffer.split(" ")
             print('perform buffer', buffer_elements)
             for buffer_element in buffer_elements:
-                if buffer_element.isnumeric():
+                if RpnCalculator.is_numeric(buffer_element):
                     self.enter(int(buffer_element))
                 else:
                     self.perform(buffer_element)
         return self.read()
+
+    @staticmethod
+    def is_numeric(value):
+        # althoug this look horrible, it is actually faster than regex
+        result = None
+        try:
+            float(value)
+            result = True
+        except ValueError:
+            result = False
+        return result
 
     def perform(self, operatorCharacter: str) -> int:
         operator = self._registry.operator(operatorCharacter)
