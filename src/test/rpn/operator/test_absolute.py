@@ -40,3 +40,10 @@ class TestAbsolute(unittest.TestCase):
         self.assertEqual(result, 1)
 
         self.assertEqual(calc.read(), 1)
+
+    # def test_buffer(self):
+    #     calc = RpnCalculator()
+    #     result = calc.perform_buffer("-1 ||")
+    #     expected = 1
+    #     self.assertEqual(result, expected)
+    #     self.assertEqual(calc.read(), expected)
