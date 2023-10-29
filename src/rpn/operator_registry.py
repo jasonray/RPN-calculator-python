@@ -18,14 +18,14 @@ class OperatorRegistry:
         self._registry = {}
         self._register(AdditionOperator(), "+")
         self._register(SubtractionOperator(), "-")
-        self._register(AbsoluteOperator(), "||")
         self._register(DivisionOperator(), "/")
-        self._register(AverageOperator(), ["ave", "average"])
-        self._register(ClearOperator(), ["C", "CLEAR"])
         self._register(SumOperator(), "sum")
-        self._register(DoubleOperator(), "double")
+        self._register(AbsoluteOperator(), "||")
         self._register(MaxOperator(), "max")
         self._register(MinOperator(), "min")
+        self._register(AverageOperator(), ["ave", "average"])
+        self._register(ClearOperator(), ["C", "CLEAR"])
+        self._register(DoubleOperator(), "double")
         self._register(PowerOperator(), "pow")
 
     def _register(self, operator: Operator, operator_symbol: str):
