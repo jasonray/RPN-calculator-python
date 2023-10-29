@@ -47,3 +47,9 @@ class TestMultiplication(unittest.TestCase):
         self.assertEqual(result, 3)
 
         self.assertEqual(calc.read(), 3)
+
+    def test_buffer_input(self):
+        calc = RpnCalculator()
+        result = calc.perform_buffer("2 3 *")
+        self.assertEqual(result, 6)
+        self.assertEqual(calc.read(), 6)
