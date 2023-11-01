@@ -1,6 +1,6 @@
 import unittest
-from src.rpn.calculator import RpnCalculator
 import pytest
+from src.rpn.calculator import RpnCalculator
 
 
 class TestFactorial(unittest.TestCase):

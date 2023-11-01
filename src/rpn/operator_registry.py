@@ -1,5 +1,4 @@
 from src.rpn.operator.double_operator import DoubleOperator
-from src.rpn.operator.factorial_operator import FactorialOperator
 from src.rpn.operator.multiplication_operator import MultiplicationOperator
 from src.rpn.operator.operator import Operator
 from src.rpn.operator.addition_operator import AdditionOperator
@@ -12,6 +11,7 @@ from src.rpn.operator.clear_operator import ClearOperator
 from src.rpn.operator.sum_operator import SumOperator
 from src.rpn.operator.min_operator import MinOperator
 from src.rpn.operator.max_operator import MaxOperator
+from src.rpn.operator.factorial_operator import FactorialOperator
 
 
 class OperatorRegistry:
