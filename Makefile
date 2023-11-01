@@ -3,10 +3,10 @@ all: default
 clean: 
 
 deps:
-	python3 -m pip install -r requirements.txt
+	pip install -r requirements.txt
 
 dev_deps:
-	python3 -m pip install -r requirements-dev.txt
+	pip install -r requirements-dev.txt
 
 check-format: dev_deps
 	yapf -rd src
