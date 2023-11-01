@@ -11,6 +11,7 @@ from src.rpn.operator.clear_operator import ClearOperator
 from src.rpn.operator.sum_operator import SumOperator
 from src.rpn.operator.min_operator import MinOperator
 from src.rpn.operator.max_operator import MaxOperator
+from src.rpn.operator.factorial_operator import FactorialOperator
 
 
 class OperatorRegistry:
@@ -29,6 +30,7 @@ class OperatorRegistry:
         self._register(DoubleOperator(), "double")
         self._register(PowerOperator(), "pow")
         self._register(MultiplicationOperator(), "*")
+        self._register(FactorialOperator(), "!")
 
     def _register(self, operator: Operator, operator_symbol: str):
         if isinstance(operator_symbol, list):
