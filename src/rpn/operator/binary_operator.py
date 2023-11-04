@@ -13,4 +13,4 @@ class BinaryOperator(Operator):
 
     def do_operator_by_operands(self, lhs: int, rhs: int) -> int:
         ## this will be implemented by concrete class
-        return lhs + rhs
+        return 0
