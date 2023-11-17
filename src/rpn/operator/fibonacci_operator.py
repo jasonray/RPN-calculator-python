@@ -24,8 +24,7 @@ class FibonacciOperator(MonomialOperator):
             return 1
         if n == 2:
             return 1
-        else:
-            return FibonacciOperator.fib_rec(n - 2) + FibonacciOperator.fib_rec(n - 1)
+        return FibonacciOperator.fib_rec(n - 2) + FibonacciOperator.fib_rec(n - 1)
 
     @staticmethod
     def fib_loop(n: int):
