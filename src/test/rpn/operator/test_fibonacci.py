@@ -1,6 +1,7 @@
 import pytest
 from src.rpn.calculator import RpnCalculator
 
+
 class TestFib():
 
     @pytest.mark.parametrize("n, expected", [
