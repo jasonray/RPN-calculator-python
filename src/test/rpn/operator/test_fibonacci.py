@@ -1,6 +1,8 @@
 import unittest
 import pytest
 from src.rpn.calculator import RpnCalculator
+import time
+from statman import Statman
 
 class TestFib():
 
@@ -27,6 +29,7 @@ class TestFib():
                 (17,1597),
                 (18,2584),
                 (19,4181),
+                (0,0),
             ])
     def test_fib(self, n, expected):
         calc = RpnCalculator()
@@ -34,3 +37,19 @@ class TestFib():
         result = calc.perform("fib")
         assert result==expected
         assert calc.read()==expected
+
+    def test_perf(self):
+        n = 19
+        expected = 4181
+        iterations = 1000000
+        Statman.stopwatch('fib').start()
+        start_time = time.time()
+        for i in range(1, iterations):
+            calc = RpnCalculator()
+            calc.enter(n)
+            result=calc.perform("fib")
+            assert result==expected
+        Statman.stopwatch('fib').stop()
+        delta = Statman.stopwatch('fib').read(precision=1, units = "s")
+        print(f'n={n}, iterations={iterations}, time={delta}')
+        assert delta < 5
