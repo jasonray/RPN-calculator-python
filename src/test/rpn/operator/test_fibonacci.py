@@ -1,9 +1,5 @@
-import unittest
 import pytest
 from src.rpn.calculator import RpnCalculator
-import time
-from statman import Statman
-
 
 class TestFib():
 
