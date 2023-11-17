@@ -14,6 +14,7 @@ from src.rpn.operator.max_operator import MaxOperator
 from src.rpn.operator.factorial_operator import FactorialOperator
 from src.rpn.operator.fibonacci_operator import FibonacciOperator
 
+
 class OperatorRegistry:
 
     def __init__(self):
