@@ -12,7 +12,7 @@ from src.rpn.operator.sum_operator import SumOperator
 from src.rpn.operator.min_operator import MinOperator
 from src.rpn.operator.max_operator import MaxOperator
 from src.rpn.operator.factorial_operator import FactorialOperator
-
+from src.rpn.operator.fibonacci_operator import FibonacciOperator
 
 class OperatorRegistry:
 
@@ -31,6 +31,7 @@ class OperatorRegistry:
         self._register(PowerOperator(), "pow")
         self._register(MultiplicationOperator(), "*")
         self._register(FactorialOperator(), "!")
+        self._register(FibonacciOperator(), "fib")
 
     def _register(self, operator: Operator, operator_symbol: str):
         if isinstance(operator_symbol, list):
