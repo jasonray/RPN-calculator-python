@@ -32,17 +32,17 @@ class FibonacciOperator(MonomialOperator):
             raise Exception("Factorial of negative number not supported")
         p2 = 0
         p1 = 0
-        sum = 0
+        value = 0
         for i in range(0, n + 1):
             if i == 0:
                 pass
             elif i == 1:
-                sum += 1
+                value += 1
             else:
-                sum = p1 + p2
+                value = p1 + p2
             p2 = p1
-            p1 = sum
-        return sum
+            p1 = value
+        return value
 
     def fib_rec_cache(self, n: int):
         result = self._cache.get(n)
