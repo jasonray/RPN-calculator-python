@@ -50,7 +50,8 @@ class FibonacciOperator(MonomialOperator):
             # print(f'fib_rec_cache({n}, not cached)')
             if n < 0:
                 raise Exception("Factorial of negative number not supported")
-            elif n == 0:
+
+            if n == 0:
                 result = 0
             elif n == 1:
                 result = 1
